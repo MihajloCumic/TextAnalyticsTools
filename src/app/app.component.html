@@ -1,0 +1,51 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <div class="container-fluid">
+      <a [routerLink]="'/'" class="navbar-brand">Text analytics tools</a>
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarNavAltMarkup"
+      >
+        <div class="navbar-nav">
+          <a [routerLink]="'/'" class="nav-link active" aria-current="page"
+            >Token</a
+          >
+          <a
+            [routerLink]="'/entityextraciton'"
+            class="nav-link active"
+            aria-current="page"
+            >Entity extraction</a
+          >
+          <a
+            [routerLink]="'/textsimilarity'"
+            class="nav-link active"
+            aria-current="page"
+            >Text similarity</a
+          >
+          <a
+            [routerLink]="'/languagedetection'"
+            class="nav-link active"
+            aria-current="page"
+            >Language detection</a
+          >
+          <a
+            [routerLink]="'/sentimentanalysis'"
+            class="nav-link active"
+            aria-current="page"
+            >Sentiment analysis</a
+          >
+          <a
+            [routerLink]="'/history'"
+            class="nav-link active"
+            aria-current="page"
+            >History</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container pt-3">
+  <router-outlet></router-outlet>
+</div>

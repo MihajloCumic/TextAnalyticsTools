@@ -1,0 +1,62 @@
+<div class="container">
+  <form (submit)="analyseSentiment()">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="FormControlText1" class="form-label">Enter text:</label>
+          <textarea
+            [(ngModel)]="text"
+            class="form-control"
+            id="FormControlText1"
+            rows="3"
+            name="text"
+          ></textarea>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            [(ngModel)]="lang"
+            class="form-check-input"
+            type="radio"
+            name="lang"
+            id="inlineRadio1"
+            value="auto"
+            checked
+          />
+          <label class="form-check-label" for="inlineRadio1">Auto</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            [(ngModel)]="lang"
+            class="form-check-input"
+            type="radio"
+            name="lang"
+            id="inlineRadio2"
+            value="en"
+          />
+          <label class="form-check-label" for="inlineRadio2">English</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            [(ngModel)]="lang"
+            class="form-check-input"
+            type="radio"
+            name="lang"
+            id="inlineRadio3"
+            value="it"
+          />
+          <label class="form-check-label" for="inlineRadio3">Italian</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Analyse</button>
+    </div>
+  </form>
+  <div class="container">
+    <div class="row">
+      <h3>Score: {{ sentiment.score }}</h3>
+    </div>
+    <div class="row" *ngIf="sentiment.type">
+      <h3 [style]="{ color: displayColor.toString() }">{{ sentiment.type }}</h3>
+    </div>
+  </div>
+</div>

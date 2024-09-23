@@ -1,0 +1,26 @@
+<div *ngIf="res.annotations" class="container">
+  <div class="row">
+    <div
+      *ngFor="let entity of res.annotations"
+      class="col myCol"
+      align="center"
+    >
+      <h3 *ngIf="entity.spot">{{ entity.spot }}</h3>
+      <div *ngIf="entity.image" class="imgContainer">
+        <img [src]="entity.image.thumbnail" alt="" />
+      </div>
+      <div *ngIf="entity.abstract">
+        <h4>Abstract:</h4>
+        <div class="abstractArea overflow-auto">
+          <p>{{ entity.abstract }}</p>
+        </div>
+      </div>
+      <div *ngIf="entity.categories">
+        <h4>Categories:</h4>
+        <div class="categoriesArea overflow-auto">
+          <p *ngFor="let category of entity.categories">{{ category }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

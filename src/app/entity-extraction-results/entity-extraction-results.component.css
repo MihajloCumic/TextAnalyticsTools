@@ -1,0 +1,33 @@
+.myCol {
+  border-style: solid;
+  border-width: 2;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 400px;
+}
+
+h3 {
+  font-size: 9;
+  border-bottom-style: solid;
+  border-bottom-width: 1;
+}
+
+.abstractArea {
+  max-width: 400px;
+  height: 200px;
+  border-top-style: solid;
+  border-top-width: 1;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.categoriesArea {
+  max-width: 400px;
+  height: 200px;
+  border-top-style: solid;
+  border-top-width: 1;
+}

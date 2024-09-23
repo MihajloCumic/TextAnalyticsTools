@@ -1,0 +1,34 @@
+<div class="container">
+  <form (submit)="getSimilarity()">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="FormControlText1" class="form-label">Text 1</label>
+          <textarea
+            [(ngModel)]="text1"
+            class="form-control"
+            id="FormControlText1"
+            rows="3"
+            name="text1"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label for="FormControlText2" class="form-label">Text 2</label>
+          <textarea
+            [(ngModel)]="text2"
+            class="form-control"
+            id="FormControlText2"
+            rows="3"
+            name="text2"
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Compare</button>
+    </div>
+  </form>
+  <div class="row">
+    <h3 *ngIf="similarity > -1">Similarity is {{ similarity }}%</h3>
+  </div>
+</div>

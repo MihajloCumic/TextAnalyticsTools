@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row titleRow">
+    <h2>History</h2>
+  </div>
+  <div *ngFor="let h of history" class="row contentRow">
+    <p style="display: inline">
+      [{{ h.timeDate | date : "dd.MM.yyyy hh:mm:ss" }}] {{ h.method }}
+      {{ h.urlWithParams }}
+    </p>
+  </div>
+</div>

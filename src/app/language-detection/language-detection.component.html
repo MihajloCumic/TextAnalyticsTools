@@ -1,0 +1,39 @@
+<div class="container">
+  <form (submit)="detectLanguages()">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label for="FormControlText1" class="form-label">Enter text:</label>
+          <textarea
+            [(ngModel)]="text"
+            class="form-control"
+            id="FormControlText1"
+            rows="3"
+            name="text"
+          ></textarea>
+        </div>
+        <div class="form-check">
+          <input
+            [(ngModel)]="cleanCheck"
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="cleanCheckbox"
+            name="cleanCheck"
+          />
+          <label class="form-check-label" for="cleanCheckbox">
+            Clean text
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Detect</button>
+    </div>
+  </form>
+  <div *ngIf="detectLanguages" class="row">
+    <div *ngFor="let lang of detectedLanguages" class="col">
+      <h4>Language: {{ lang.lang }}</h4>
+      <h4>Confidence: {{ lang.confidence }}</h4>
+    </div>
+  </div>
+</div>
